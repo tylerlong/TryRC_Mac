@@ -14,8 +14,6 @@ namespace TryRC_Mac
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-
-			// Do any additional setup after loading the view.
 		}
 
 		public override NSObject RepresentedObject {
@@ -26,6 +24,11 @@ namespace TryRC_Mac
 				base.RepresentedObject = value;
 				// Update the view, if already loaded.
 			}
+		}
+
+		partial void sendSMS(Foundation.NSObject sender)
+		{
+			Console.WriteLine("test");
 		}
 	}
 }
