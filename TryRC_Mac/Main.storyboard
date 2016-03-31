@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
     </dependencies>
     <scenes>
@@ -680,14 +681,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M1r-yv-168">
-                                <rect key="frame" x="20" y="206" width="440" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="App Secret" drawsBackground="YES" id="XDs-yy-IDq">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vOo-cH-bxY">
                                 <rect key="frame" x="18" y="162" width="445" height="26"/>
                                 <popUpButtonCell key="cell" type="push" title="Sandbox: https://platform.devtest.ringcentral.com" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="2Rg-C4-sXN" id="PR5-6v-Roo">
@@ -704,14 +697,6 @@
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Rt-d3-Qe8">
                                 <rect key="frame" x="20" y="135" width="440" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Username" drawsBackground="YES" id="xCo-bJ-Tg7">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rI2-ti-v2a">
-                                <rect key="frame" x="20" y="103" width="440" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" id="zZW-i1-HwA">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -743,38 +728,60 @@
                                     <action selector="sendSMS:" target="XfG-lQ-9wD" id="K1z-t7-9NP"/>
                                 </connections>
                             </button>
+                            <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EEm-Sg-frL">
+                                <rect key="frame" x="20" y="206" width="440" height="22"/>
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="App Secret" drawsBackground="YES" usesSingleLineMode="YES" id="wOL-ri-tcU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </secureTextFieldCell>
+                            </secureTextField>
+                            <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hb2-ag-TUG">
+                                <rect key="frame" x="20" y="103" width="440" height="22"/>
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="nLo-DD-aZk">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </secureTextFieldCell>
+                            </secureTextField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="rI2-ti-v2a" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="0Fi-h7-iDl"/>
                             <constraint firstItem="6K3-Sj-WGS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="0a3-WV-abI"/>
+                            <constraint firstItem="EEm-Sg-frL" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="0t7-ML-Vf4"/>
                             <constraint firstItem="5Rt-d3-Qe8" firstAttribute="top" secondItem="vOo-cH-bxY" secondAttribute="bottom" constant="8" symbolic="YES" id="1jk-Nh-GTs"/>
+                            <constraint firstItem="hb2-ag-TUG" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="35G-hZ-2EH"/>
                             <constraint firstItem="3qq-oN-P6K" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="5ID-l1-Whi"/>
-                            <constraint firstAttribute="trailing" secondItem="rI2-ti-v2a" secondAttribute="trailing" constant="20" symbolic="YES" id="71O-M2-CMc"/>
-                            <constraint firstItem="6K3-Sj-WGS" firstAttribute="top" secondItem="rI2-ti-v2a" secondAttribute="bottom" constant="10" symbolic="YES" id="9US-Xg-q9B"/>
-                            <constraint firstItem="rI2-ti-v2a" firstAttribute="top" secondItem="5Rt-d3-Qe8" secondAttribute="bottom" constant="10" symbolic="YES" id="Aot-Tx-ygH"/>
                             <constraint firstAttribute="trailing" secondItem="6K3-Sj-WGS" secondAttribute="trailing" constant="20" symbolic="YES" id="JZj-2R-Yr1"/>
-                            <constraint firstAttribute="trailing" secondItem="M1r-yv-168" secondAttribute="trailing" constant="20" symbolic="YES" id="JcA-Qb-k4E"/>
-                            <constraint firstItem="M1r-yv-168" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="KKG-Cv-aFB"/>
                             <constraint firstItem="odM-iq-wNZ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="PER-15-1py"/>
                             <constraint firstItem="odM-iq-wNZ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="PTp-jq-gZQ"/>
-                            <constraint firstItem="vOo-cH-bxY" firstAttribute="top" secondItem="M1r-yv-168" secondAttribute="bottom" constant="20" symbolic="YES" id="buH-Jg-Y6w"/>
+                            <constraint firstItem="EEm-Sg-frL" firstAttribute="top" secondItem="odM-iq-wNZ" secondAttribute="bottom" constant="10" symbolic="YES" id="YRR-nO-WnO"/>
+                            <constraint firstAttribute="trailing" secondItem="hb2-ag-TUG" secondAttribute="trailing" constant="20" symbolic="YES" id="cLX-eM-ZAv"/>
+                            <constraint firstItem="vOo-cH-bxY" firstAttribute="top" secondItem="EEm-Sg-frL" secondAttribute="bottom" constant="20" symbolic="YES" id="dK3-dL-tqH"/>
                             <constraint firstItem="6e4-fB-0aR" firstAttribute="top" secondItem="3qq-oN-P6K" secondAttribute="bottom" constant="8" symbolic="YES" id="ebt-r7-i9q"/>
                             <constraint firstAttribute="trailing" secondItem="3qq-oN-P6K" secondAttribute="trailing" constant="20" symbolic="YES" id="fRi-6I-Fpt"/>
                             <constraint firstItem="3qq-oN-P6K" firstAttribute="top" secondItem="6K3-Sj-WGS" secondAttribute="bottom" constant="10" symbolic="YES" id="fay-px-bsm"/>
-                            <constraint firstItem="M1r-yv-168" firstAttribute="top" secondItem="odM-iq-wNZ" secondAttribute="bottom" constant="10" symbolic="YES" id="g6l-EW-m1L"/>
+                            <constraint firstItem="6K3-Sj-WGS" firstAttribute="top" secondItem="hb2-ag-TUG" secondAttribute="bottom" constant="10" symbolic="YES" id="kOv-uS-2T7"/>
+                            <constraint firstItem="hb2-ag-TUG" firstAttribute="top" secondItem="5Rt-d3-Qe8" secondAttribute="bottom" constant="10" symbolic="YES" id="kh6-w1-9ZK"/>
                             <constraint firstItem="6e4-fB-0aR" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="lqh-Uq-FGg"/>
                             <constraint firstItem="5Rt-d3-Qe8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="lup-GR-gba"/>
                             <constraint firstAttribute="trailing" secondItem="odM-iq-wNZ" secondAttribute="trailing" constant="20" symbolic="YES" id="odR-jt-zIU"/>
                             <constraint firstAttribute="trailing" secondItem="vOo-cH-bxY" secondAttribute="trailing" constant="20" symbolic="YES" id="qM6-6y-451"/>
+                            <constraint firstAttribute="trailing" secondItem="EEm-Sg-frL" secondAttribute="trailing" constant="20" symbolic="YES" id="sZE-Or-hEu"/>
                             <constraint firstAttribute="trailing" secondItem="5Rt-d3-Qe8" secondAttribute="trailing" constant="20" symbolic="YES" id="sqH-UD-fuM"/>
                             <constraint firstItem="vOo-cH-bxY" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="uWm-fv-rMx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="appKeyTextField" destination="odM-iq-wNZ" id="hFo-LT-t2D"/>
-                        <outlet property="appSecretTextField" destination="M1r-yv-168" id="Iuy-I7-g4y"/>
+                        <outlet property="appSecretTextField" destination="EEm-Sg-frL" id="EtG-tB-Pqn"/>
                         <outlet property="messageTextField" destination="3qq-oN-P6K" id="i4k-ff-vjW"/>
-                        <outlet property="passwordTextField" destination="rI2-ti-v2a" id="qPu-Ty-mcF"/>
+                        <outlet property="passwordTextField" destination="hb2-ag-TUG" id="FAm-3F-dbE"/>
                         <outlet property="sendToTextField" destination="6K3-Sj-WGS" id="pOb-TB-dxI"/>
                         <outlet property="serverPopUpButton" destination="vOo-cH-bxY" id="92e-q9-Kc2"/>
                         <outlet property="usernameTextField" destination="5Rt-d3-Qe8" id="9gg-OT-h2t"/>

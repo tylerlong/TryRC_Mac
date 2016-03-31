@@ -16,13 +16,13 @@ namespace TryRC_Mac
 		AppKit.NSTextField appKeyTextField { get; set; }
 
 		[Outlet]
-		AppKit.NSTextField appSecretTextField { get; set; }
+		AppKit.NSSecureTextField appSecretTextField { get; set; }
 
 		[Outlet]
 		AppKit.NSTextField messageTextField { get; set; }
 
 		[Outlet]
-		AppKit.NSTextField passwordTextField { get; set; }
+		AppKit.NSSecureTextField passwordTextField { get; set; }
 
 		[Outlet]
 		AppKit.NSTextField sendToTextField { get; set; }
@@ -48,14 +48,9 @@ namespace TryRC_Mac
 				appSecretTextField = null;
 			}
 
-			if (serverPopUpButton != null) {
-				serverPopUpButton.Dispose ();
-				serverPopUpButton = null;
-			}
-
-			if (usernameTextField != null) {
-				usernameTextField.Dispose ();
-				usernameTextField = null;
+			if (messageTextField != null) {
+				messageTextField.Dispose ();
+				messageTextField = null;
 			}
 
 			if (passwordTextField != null) {
@@ -68,9 +63,14 @@ namespace TryRC_Mac
 				sendToTextField = null;
 			}
 
-			if (messageTextField != null) {
-				messageTextField.Dispose ();
-				messageTextField = null;
+			if (serverPopUpButton != null) {
+				serverPopUpButton.Dispose ();
+				serverPopUpButton = null;
+			}
+
+			if (usernameTextField != null) {
+				usernameTextField.Dispose ();
+				usernameTextField = null;
 			}
 		}
 	}
