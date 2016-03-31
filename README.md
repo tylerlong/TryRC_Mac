@@ -2,6 +2,8 @@
 
 Try RingCentral C# SDK with a Mac app.
 
+This is just a demo app. It demostrates how to call RingCentral C# SDK to send sms.
+
 ![TryRC_Mac](screenshot.png)
 
 
