@@ -2,6 +2,8 @@
 
 Try RingCentral C# SDK with a Mac app.
 
+![TryRC_Mac](screenshot.png)
+
 
 ## todo
 
